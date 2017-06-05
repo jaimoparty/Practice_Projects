@@ -13,9 +13,6 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db"
-  },
   "AccessToken": {
     "dataSource": "db",
     "public": false
@@ -34,5 +31,19 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "basic_user": {
+    "dataSource": "db",
+    "public": true,
+    "options":{
+      "remoting":{
+        "sharedMethods":{
+          "*":false,
+          "create":true,
+          "findById":true,
+          "createUser":true
+        }
+      }
+    }
   }
 }
